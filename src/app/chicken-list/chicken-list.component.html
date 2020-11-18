@@ -1,0 +1,35 @@
+<h1>Lista de Ventas</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Imagen</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{chicken.name}}</td>
+            <td>{{chicken.type}}</td>
+            <td>{{chicken.price}}</td>
+            <td>{{chicken.stock}}</td>
+            <td><img [src]="chicken.image" [alt]="chicken.name"></td>
+        </tr>
+        <tr>
+            <td>Pechuga</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Pata Muslo</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
