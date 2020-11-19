@@ -10,26 +10,14 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
+
+        <tr *ngFor="let chicken of chickens" [ngClass]="{'clearance': chicken.clearance}">
             <td>{{chicken.name}}</td>
             <td>{{chicken.type}}</td>
-            <td>{{chicken.price}}</td>
-            <td>{{chicken.stock}}</td>
+            <td>{{chicken.price | currency}}</td>
+            <td><span class="badge badge-info" *ngIf="chicken.stock>0">Hay stock</span></td>
+            <td><span class="badge badge-danger" *ngIf="chicken.stock==0">Sin stock</span></td>
             <td><img [src]="chicken.image" [alt]="chicken.name"></td>
-        </tr>
-        <tr>
-            <td>Pechuga</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Pata Muslo</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
         </tr>
     </tbody>
 </table>
