@@ -4,10 +4,10 @@
 		<tr>
 			<th>Nombre</th>
 			<th>Tipo</th>
-			<th>Precio</th>
+			<th>Precio p/Kilo</th>
 			<th>Stock</th>
 			<th>Imagen</th>
-			<th>Comprar</th>
+			<th>Comprar p/Kilo</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -22,9 +22,10 @@
 			</td>
 			<td><img [src]="chicken.image" [alt]="chicken.name" width="120" class="img-thumbnail"></td>
 			<td>
-				<app-input-integer [(quantity)]="chicken.quantity" [max]="chicken.stock" *ngIf="chicken.stock"></app-input-integer>
-				<button *ngIf="chicken.stock>0" class="btn btn-primary btn-sm" (click)="addToCart(chicken)">Comprar</button>
-			
+				<app-input-integer [(quantity)]="chicken.quantity" [max]="chicken.stock" *ngIf="chicken.stock">
+				</app-input-integer>
+				<button *ngIf="chicken.stock>0" class="btn  btn-danger btn-sm" (click)="addToCart(chicken)">Comprar</button>
+
 			</td>
 		</tr>
 	</tbody>
